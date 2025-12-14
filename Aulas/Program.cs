@@ -1,1 +1,4 @@
-﻿Console.WriteLine("Dir name: " + Directory.GetCurrentDirectory());
+﻿DateTime date = DateTime.Now;
+
+
+Console.WriteLine($"Data atual: {date.ToLongDateString()}");
