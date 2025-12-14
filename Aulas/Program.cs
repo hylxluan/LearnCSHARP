@@ -1,4 +1,4 @@
 ﻿DateTime date = DateTime.Now;
 
 
-Console.WriteLine($"Data atual: {date.ToLongDateString()}");
+Console.WriteLine($"Data atual: {date:D}");
