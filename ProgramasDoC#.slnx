@@ -3,6 +3,6 @@
   <Project Path="BlazorHybridWebApp/BlazorHybridWebApp.Client/BlazorHybridWebApp.Client.csproj" Id="71576e2b-2857-4393-b427-522981c7f681" />
   <Project Path="BlazorHybridWebApp/BlazorHybridWebApp/BlazorHybridWebApp.csproj" Id="4c5f8af4-2161-4db2-adc7-5a3d6c2ec8fc" />
   <Project Path="BlazorWebAssembly/BlazorWebAssembly.csproj" Id="3362eaa8-ed7d-406e-b2a5-c2754418522e" />
-  <Project Path="Gestao_Igrejas/Gestao_Igrejas.csproj" Id="f8f084b9-993f-45a1-87ce-fe6604c4fe2c" />
+  <Project Path="GestaoEquipamentos/GestaoClientes.csproj" Id="3b4c4ea0-3e5a-4221-922f-119f4c4931dd" />
   <Project Path="WebForms/WebForms.csproj" Id="e2f55b3a-6a55-4c0c-963e-ced9b9e7b7e6" />
 </Solution>
