@@ -479,33 +479,6 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "\tAcre",
-            "\tAlagoas",
-            "\tAmapá",
-            "\tAmazonas",
-            "\tBahia",
-            "\tCeará",
-            "\tEspírito Santo",
-            "\tGoiás",
-            "\tMaranhão",
-            "\tMato Grosso",
-            "\tMato Grosso do Sul",
-            "\tMinas Gerais",
-            "\tPará",
-            "\tParaíba",
-            "\tParaná",
-            "\tPernambuco",
-            "\tPiauí",
-            "\tRio de Janeiro",
-            "\tRio Grande do Norte",
-            "\tRio Grande do Sul",
-            "\tRondônia",
-            "\tRoraima",
-            "\tSanta Catarina",
-            "\tSão Paulo",
-            "\tSergipe",
-            "\tTocantins"});
             this.comboBox3.Location = new System.Drawing.Point(235, 69);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(505, 26);
@@ -609,9 +582,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(0, 900);
             this.BackgroundImage = global::GestaoClientes.Properties.Resources.novo_gradiente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1040, 800);
+            this.ClientSize = new System.Drawing.Size(1053, 749);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
