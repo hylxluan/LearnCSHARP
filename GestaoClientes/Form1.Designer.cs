@@ -163,9 +163,9 @@
             this.label9.Location = new System.Drawing.Point(13, 543);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 18);
+            this.label9.Size = new System.Drawing.Size(154, 18);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Situação Cadastral";
+            this.label9.Text = "Situação Cadastral:";
             // 
             // label10
             // 
@@ -400,7 +400,7 @@
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(178, 543);
+            this.checkBox1.Location = new System.Drawing.Point(174, 542);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(70, 23);
             this.checkBox1.TabIndex = 20;
