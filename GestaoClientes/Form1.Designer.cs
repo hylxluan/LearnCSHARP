@@ -53,8 +53,6 @@
             this.radioFeminino = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -63,6 +61,8 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -108,9 +108,9 @@
             this.label4.Location = new System.Drawing.Point(243, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 18);
+            this.label4.Size = new System.Drawing.Size(37, 18);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Documentação";
+            this.label4.Text = "CPF";
             // 
             // label5
             // 
@@ -337,20 +337,6 @@
             this.radioButton2.Text = "Solteiro";
             this.radioButton2.UseVisualStyleBackColor = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(246, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 26);
-            this.textBox3.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(246, 115);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 26);
-            this.textBox5.TabIndex = 16;
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(246, 231);
@@ -379,9 +365,8 @@
             this.maskedTextBox1.Location = new System.Drawing.Point(673, 173);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(88, 26);
             this.maskedTextBox1.TabIndex = 18;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // textBox9
@@ -394,7 +379,7 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(464, 330);
-            this.maskedTextBox2.Mask = "(##) #####-####";
+            this.maskedTextBox2.Mask = "(00) 00000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(144, 26);
             this.maskedTextBox2.TabIndex = 19;
@@ -412,14 +397,37 @@
             // 
             this.checkBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(16, 577);
+            this.checkBox1.Location = new System.Drawing.Point(178, 543);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(70, 23);
             this.checkBox1.TabIndex = 20;
             this.checkBox1.Text = "Ativa";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox3.BeepOnError = true;
+            this.maskedTextBox3.Location = new System.Drawing.Point(246, 113);
+            this.maskedTextBox3.Mask = "000,000,000-00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(151, 26);
+            this.maskedTextBox3.TabIndex = 18;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox4.BeepOnError = true;
+            this.maskedTextBox4.Location = new System.Drawing.Point(246, 173);
+            this.maskedTextBox4.Mask = "00,000-000";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(151, 26);
+            this.maskedTextBox4.TabIndex = 18;
+            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
             // 
             // frmCadastroClientes
             // 
@@ -430,14 +438,14 @@
             this.ClientSize = new System.Drawing.Size(1112, 730);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioFeminino);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.radioMasculino);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox7);
@@ -502,8 +510,6 @@
         private System.Windows.Forms.RadioButton radioFeminino;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
@@ -512,6 +518,8 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
     }
 }
 
