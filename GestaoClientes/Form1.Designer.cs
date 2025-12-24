@@ -159,7 +159,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(799, 598);
+            this.label9.Location = new System.Drawing.Point(805, 630);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 18);
@@ -182,7 +182,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(32, 537);
+            this.label11.Location = new System.Drawing.Point(38, 569);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(105, 18);
@@ -341,7 +341,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(35, 558);
+            this.textBox10.Location = new System.Drawing.Point(41, 590);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(757, 117);
@@ -354,7 +354,7 @@
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(960, 597);
+            this.checkBox1.Location = new System.Drawing.Point(966, 629);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(70, 23);
             this.checkBox1.TabIndex = 20;
@@ -584,7 +584,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.maskedTextBox4);
-            this.groupBox2.Location = new System.Drawing.Point(147, 190);
+            this.groupBox2.Location = new System.Drawing.Point(147, 200);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(772, 243);
             this.groupBox2.TabIndex = 23;
@@ -598,7 +598,7 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Location = new System.Drawing.Point(147, 439);
+            this.groupBox3.Location = new System.Drawing.Point(147, 460);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(772, 85);
             this.groupBox3.TabIndex = 24;
@@ -609,9 +609,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestaoClientes.Properties.Resources.gradiente1;
+            this.BackgroundImage = global::GestaoClientes.Properties.Resources.novo_gradiente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1040, 764);
+            this.ClientSize = new System.Drawing.Size(1040, 800);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
