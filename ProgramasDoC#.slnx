@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="Aulas/Aulas.csproj" />
-  <Project Path="GestaoEquipamentos/GestaoClientes.csproj" Id="3b4c4ea0-3e5a-4221-922f-119f4c4931dd" />
+  <Project Path="GestaoClientes/GestaoClientes.csproj" Id="59b57a49-b5c3-4c3f-aa5b-8fef2d4222c9" />
 </Solution>
