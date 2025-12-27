@@ -69,10 +69,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btrnImg = new System.Windows.Forms.Button();
+            this.btnRemoverImg = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -250,6 +257,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(34, 57);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(104, 26);
@@ -311,7 +319,6 @@
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.White;
             this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.HidePromptOnLeave = true;
             this.maskedTextBox1.Location = new System.Drawing.Point(553, 57);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -330,7 +337,6 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.BeepOnError = true;
-            this.maskedTextBox2.HidePromptOnLeave = true;
             this.maskedTextBox2.Location = new System.Drawing.Point(596, 40);
             this.maskedTextBox2.Mask = "(00) 00000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
@@ -365,7 +371,6 @@
             // 
             this.maskedTextBox3.BackColor = System.Drawing.Color.White;
             this.maskedTextBox3.BeepOnError = true;
-            this.maskedTextBox3.HidePromptOnLeave = true;
             this.maskedTextBox3.Location = new System.Drawing.Point(34, 122);
             this.maskedTextBox3.Mask = "000,000,000-00";
             this.maskedTextBox3.Name = "maskedTextBox3";
@@ -378,7 +383,6 @@
             // 
             this.maskedTextBox4.BackColor = System.Drawing.Color.White;
             this.maskedTextBox4.BeepOnError = true;
-            this.maskedTextBox4.HidePromptOnLeave = true;
             this.maskedTextBox4.Location = new System.Drawing.Point(24, 69);
             this.maskedTextBox4.Mask = "00,000-000";
             this.maskedTextBox4.Name = "maskedTextBox4";
@@ -578,15 +582,104 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contato do Cliente";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btrnImg
+            // 
+            this.btrnImg.BackColor = System.Drawing.Color.LimeGreen;
+            this.btrnImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btrnImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btrnImg.ForeColor = System.Drawing.Color.Transparent;
+            this.btrnImg.Image = ((System.Drawing.Image)(resources.GetObject("btrnImg.Image")));
+            this.btrnImg.Location = new System.Drawing.Point(12, 161);
+            this.btrnImg.Name = "btrnImg";
+            this.btrnImg.Size = new System.Drawing.Size(98, 30);
+            this.btrnImg.TabIndex = 26;
+            this.btrnImg.Text = "Imagem";
+            this.btrnImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btrnImg.UseVisualStyleBackColor = false;
+            // 
+            // btnRemoverImg
+            // 
+            this.btnRemoverImg.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnRemoverImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverImg.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRemoverImg.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverImg.Image")));
+            this.btnRemoverImg.Location = new System.Drawing.Point(116, 161);
+            this.btnRemoverImg.Name = "btnRemoverImg";
+            this.btnRemoverImg.Size = new System.Drawing.Size(43, 30);
+            this.btnRemoverImg.TabIndex = 26;
+            this.btnRemoverImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemoverImg.UseVisualStyleBackColor = false;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.Red;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnFechar.Location = new System.Drawing.Point(12, 798);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(98, 30);
+            this.btnFechar.TabIndex = 26;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(127, 798);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "+ Novo";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LimeGreen;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(877, 798);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 30);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Salvar Cliente";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(0, 900);
+            this.AutoScrollMinSize = new System.Drawing.Size(0, 840);
             this.BackgroundImage = global::GestaoClientes.Properties.Resources.novo_gradiente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1053, 749);
+            this.ClientSize = new System.Drawing.Size(1053, 801);
+            this.Controls.Add(this.btnRemoverImg);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.btrnImg);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -611,6 +704,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,6 +752,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btrnImg;
+        private System.Windows.Forms.Button btnRemoverImg;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
