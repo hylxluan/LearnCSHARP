@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Aulas/Aulas.csproj" />
   <Project Path="GestaoClientes/GestaoClientes.csproj" Id="59b57a49-b5c3-4c3f-aa5b-8fef2d4222c9" />
+  <Project Path="LyriumPlayerV3/LyriumPlayerV3.csproj" Id="e361d215-57b6-4085-bb06-39238b8e55c3" />
 </Solution>

@@ -61,7 +61,6 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.comboEstado = new System.Windows.Forms.ComboBox();
-            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.comboEstadoCivil = new System.Windows.Forms.ComboBox();
             this.panelGenero = new System.Windows.Forms.Panel();
             this.groupBoxDadosClientes = new System.Windows.Forms.GroupBox();
@@ -75,6 +74,7 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnNovoCliente = new System.Windows.Forms.Button();
             this.btnSalvarCliente = new System.Windows.Forms.Button();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.panelGenero.SuspendLayout();
             this.groupBoxDadosClientes.SuspendLayout();
             this.groupBoxDadosEndereco.SuspendLayout();
@@ -472,14 +472,6 @@
             this.comboEstado.Size = new System.Drawing.Size(316, 26);
             this.comboEstado.TabIndex = 21;
             // 
-            // comboCidade
-            // 
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(25, 189);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(316, 26);
-            this.comboCidade.TabIndex = 21;
-            // 
             // comboEstadoCivil
             // 
             this.comboEstadoCivil.FormattingEnabled = true;
@@ -536,12 +528,12 @@
             this.groupBoxDadosEndereco.Controls.Add(this.label5);
             this.groupBoxDadosEndereco.Controls.Add(this.label16);
             this.groupBoxDadosEndereco.Controls.Add(this.label15);
-            this.groupBoxDadosEndereco.Controls.Add(this.comboCidade);
             this.groupBoxDadosEndereco.Controls.Add(this.label14);
             this.groupBoxDadosEndereco.Controls.Add(this.comboEstado);
             this.groupBoxDadosEndereco.Controls.Add(this.label4);
             this.groupBoxDadosEndereco.Controls.Add(this.label13);
             this.groupBoxDadosEndereco.Controls.Add(this.txtEndereco);
+            this.groupBoxDadosEndereco.Controls.Add(this.txtCidade);
             this.groupBoxDadosEndereco.Controls.Add(this.txtBairro);
             this.groupBoxDadosEndereco.Controls.Add(this.txtNumero);
             this.groupBoxDadosEndereco.Controls.Add(this.maskedCEP);
@@ -664,6 +656,13 @@
             this.btnSalvarCliente.UseVisualStyleBackColor = false;
             this.btnSalvarCliente.Click += new System.EventHandler(this.btnSalvarCliente_Click);
             // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(25, 189);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(394, 26);
+            this.txtCidade.TabIndex = 16;
+            // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -743,7 +742,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboEstado;
-        private System.Windows.Forms.ComboBox comboCidade;
         private System.Windows.Forms.ComboBox comboEstadoCivil;
         private System.Windows.Forms.Panel panelGenero;
         private System.Windows.Forms.GroupBox groupBoxDadosClientes;
@@ -757,6 +755,7 @@
         private System.Windows.Forms.Button btnSalvarCliente;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtCidade;
     }
 }
 

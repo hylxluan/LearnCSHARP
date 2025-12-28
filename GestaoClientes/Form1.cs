@@ -75,14 +75,33 @@ namespace GestaoClientes
                     conexao.Open();
                     using (MySqlCommand comando = conexao.CreateCommand())
                     {
-
-                        comando.CommandText = "INSERT INTO clientes (nome, documento) VALUES (@nome, @documento)";
+                        comando.CommandText = @"INSERT INTO clientes (nome, documento, cpfcnpj, estadocivil, genero, 
+                                        data_nascimento, cep, numero_endereco, endereco, bairro, 
+                                        cidade, estado, email, celular, observacoes, situacao_cadastral) 
+                                        VALUES (@nome, @documento, @cpfcnpj, @estadocivil, @genero, 
+                                        @data_nascimento, @cep, @numero_endereco, @endereco, @bairro, 
+                                        @cidade, @estado, @email, @celular, @observacoes, @situacao_cadastral)";
+                        
                         comando.Parameters.AddWithValue("@nome", txtCliente.Text);
                         comando.Parameters.AddWithValue("@documento", txtRG.Text);
+                        comando.Parameters.AddWithValue("@cpfcnpj", maskedCPFCNPJ.Text);
+                        comando.Parameters.AddWithValue("@estadocivil", comboEstadoCivil.SelectedItem?.ToString() ?? "");
+                        comando.Parameters.AddWithValue("@genero", radioMasculino.Checked ? "M" : (radioFeminino.Checked ? "F" : ""));
+                        comando.Parameters.AddWithValue("@data_nascimento", maskedDataNascimento.Text);
+                        comando.Parameters.AddWithValue("@cep", maskedCEP.Text);
+                        comando.Parameters.AddWithValue("@numero_endereco", txtNumero.Text);
+                        comando.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                        comando.Parameters.AddWithValue("@bairro", txtBairro.Text);
+                        comando.Parameters.AddWithValue("@cidade", txtCidade.Text);
+                        comando.Parameters.AddWithValue("@estado", comboEstado.SelectedItem?.ToString() ?? "");
+                        comando.Parameters.AddWithValue("@email", txtEmail.Text);
+                        comando.Parameters.AddWithValue("@celular", maskedCelular.Text);
+                        comando.Parameters.AddWithValue("@observacoes", txtMultiObservacoes.Text);
+                        comando.Parameters.AddWithValue("@situacao_cadastral", checkBoxAtiva.Checked ? "Ativa" : "Inativa");
+                        
                         comando.ExecuteNonQuery();
                         MessageBox.Show("Cliente inserido com sucesso!");
                     }
-                    MessageBox.Show("Conexão bem-sucedida!");
                 }
                 catch (MySqlException ex)
                 {
