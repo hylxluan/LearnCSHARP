@@ -66,20 +66,20 @@
             this.panelGenero = new System.Windows.Forms.Panel();
             this.groupBoxDadosClientes = new System.Windows.Forms.GroupBox();
             this.groupBoxDadosEndereco = new System.Windows.Forms.GroupBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgCliente = new System.Windows.Forms.PictureBox();
             this.btrnImg = new System.Windows.Forms.Button();
             this.btnRemoverImg = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnNovoCliente = new System.Windows.Forms.Button();
             this.btnSalvarCliente = new System.Windows.Forms.Button();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtBairro = new System.Windows.Forms.TextBox();
             this.panelGenero.SuspendLayout();
             this.groupBoxDadosClientes.SuspendLayout();
             this.groupBoxDadosEndereco.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -552,6 +552,20 @@
             this.groupBoxDadosEndereco.TabStop = false;
             this.groupBoxDadosEndereco.Text = "Dados do Endereço";
             // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(235, 69);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(505, 26);
+            this.txtEndereco.TabIndex = 16;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(346, 127);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(394, 26);
+            this.txtBairro.TabIndex = 16;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -566,16 +580,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contato do Cliente";
             // 
-            // pictureBox1
+            // imgCliente
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 148);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.imgCliente.BackColor = System.Drawing.Color.Transparent;
+            this.imgCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgCliente.Location = new System.Drawing.Point(12, 12);
+            this.imgCliente.Name = "imgCliente";
+            this.imgCliente.Size = new System.Drawing.Size(147, 148);
+            this.imgCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgCliente.TabIndex = 25;
+            this.imgCliente.TabStop = false;
             // 
             // btrnImg
             // 
@@ -650,20 +664,6 @@
             this.btnSalvarCliente.UseVisualStyleBackColor = false;
             this.btnSalvarCliente.Click += new System.EventHandler(this.btnSalvarCliente_Click);
             // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(235, 69);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(505, 26);
-            this.txtEndereco.TabIndex = 16;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Location = new System.Drawing.Point(346, 127);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(394, 26);
-            this.txtBairro.TabIndex = 16;
-            // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -678,7 +678,7 @@
             this.Controls.Add(this.btnNovoCliente);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btrnImg);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgCliente);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBoxDadosEndereco);
             this.Controls.Add(this.groupBoxDadosClientes);
@@ -703,7 +703,7 @@
             this.groupBoxDadosEndereco.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,7 +749,7 @@
         private System.Windows.Forms.GroupBox groupBoxDadosClientes;
         private System.Windows.Forms.GroupBox groupBoxDadosEndereco;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgCliente;
         private System.Windows.Forms.Button btrnImg;
         private System.Windows.Forms.Button btnRemoverImg;
         private System.Windows.Forms.Button btnFechar;
