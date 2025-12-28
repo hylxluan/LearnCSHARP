@@ -73,6 +73,26 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_casa_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-casa-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_configurações_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-configurações-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_lírio_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-lírio-64", resourceCulture);
@@ -83,9 +103,89 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lista_de_reprodução_de_vídeo_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lista-de-reprodução-de-vídeo-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_lista_de_reprodução_de_vídeo_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lista-de-reprodução-de-vídeo-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_lótus_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-lótus-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_manual_do_usuário_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-manual-do-usuário-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_página_inicial_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-página-inicial-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_página_inicial_241 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-página-inicial-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_página_inicial_242 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-página-inicial-242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pasta_de_música_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pasta-de-música-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pasta_de_música_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pasta-de-música-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
