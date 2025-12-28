@@ -54,7 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\GraphicsHelper.cs" />
     <EmbeddedResource Include="Forms\Player.resx">
       <DependentUpon>Player.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +84,7 @@
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="UserControls\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-lótus-48.png" />
