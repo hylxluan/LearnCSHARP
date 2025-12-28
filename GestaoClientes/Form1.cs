@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GestaoClientes
 {
@@ -60,6 +61,34 @@ namespace GestaoClientes
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void btnSalvarCliente_Click(object sender, EventArgs e)
+        {
+            string conexaoString = "server=localhost;port=3306;user=root;password=;database=gt_clientes;";
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+                    using (MySqlCommand comando = conexao.CreateCommand())
+                    {
+
+                        comando.CommandText = "INSERT INTO clientes (nome, documento) VALUES (@nome, @documento)";
+                        comando.Parameters.AddWithValue("@nome", txtCliente.Text);
+                        comando.Parameters.AddWithValue("@documento", txtRG.Text);
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Cliente inserido com sucesso!");
+                    }
+                    MessageBox.Show("Conexão bem-sucedida!");
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Erro ao conectar ao banco de dados: " + ex.Message);
+                }
+            }
         }
     }
 }
