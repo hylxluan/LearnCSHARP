@@ -126,22 +126,31 @@ namespace LyriumPlayerV3
             AtivarBotao((Button)sender);
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void btnProxima_Click(object sender, EventArgs e)
         {
-            btnPlay.Visible = false;
-            btnPlay.Enabled = false;
-            btnPause.Visible = true;
-            btnPause.Enabled = true;
-            // proximas impls
+
         }
 
-        private void btnPause_Click(object sender, EventArgs e)
+        private void btnVoltarInicio_Click(object sender, EventArgs e)
         {
-            btnPause.Visible = false;
-            btnPause.Enabled = false;
-            btnPlay.Visible = true;
-            btnPlay.Enabled = true;
-            // proximas impls
+
+        }
+
+        private bool isPlaying = false;
+        private void btnPlayPause_Click(object sender, EventArgs e)
+        {
+
+            isPlaying = !isPlaying;
+
+            if (isPlaying)
+            {
+                btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
+            }
+            else
+            {
+                btnPlayPause.Image = Properties.Resources.icons8_play_dentro_de_um_círculo_50; 
+            }
+
         }
     }
 }

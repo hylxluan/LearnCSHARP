@@ -120,8 +120,10 @@
     <None Include="Resources\icons8-configurações-24.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons8-end-50.png" />
     <Content Include="Resources\icons8-pausa-circular-50.png" />
     <Content Include="Resources\icons8-play-dentro-de-um-círculo-50.png" />
+    <Content Include="Resources\icons8-skip-to-start-50.png" />
     <Content Include="Resources\tocar-musica.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
