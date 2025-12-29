@@ -125,5 +125,6 @@ namespace LyriumPlayerV3
         {
             AtivarBotao((Button)sender);
         }
+
     }
 }

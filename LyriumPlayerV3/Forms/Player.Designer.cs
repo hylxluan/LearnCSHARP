@@ -37,8 +37,13 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.pnlIndicador = new System.Windows.Forms.Panel();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.PanelInicio = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelControles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.PanelInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelControles
@@ -55,7 +60,7 @@
             this.PanelControles.Controls.Add(this.Logo);
             this.PanelControles.Location = new System.Drawing.Point(-2, -2);
             this.PanelControles.Name = "PanelControles";
-            this.PanelControles.Size = new System.Drawing.Size(197, 766);
+            this.PanelControles.Size = new System.Drawing.Size(197, 630);
             this.PanelControles.TabIndex = 0;
             // 
             // btnConfig
@@ -158,13 +163,44 @@
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
             // 
+            // PanelInicio
+            // 
+            this.PanelInicio.BackColor = System.Drawing.Color.Transparent;
+            this.PanelInicio.Controls.Add(this.pictureBox1);
+            this.PanelInicio.Controls.Add(this.label1);
+            this.PanelInicio.Location = new System.Drawing.Point(201, 12);
+            this.PanelInicio.Name = "PanelInicio";
+            this.PanelInicio.Size = new System.Drawing.Size(908, 596);
+            this.PanelInicio.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LyriumPlayerV3.Properties.Resources.tocar_musica;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 170);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(440, 234);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(132, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(600, 85);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Fila de Reprodução";
+            // 
             // frmPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LyriumPlayerV3.Properties.Resources.gradiente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1113, 756);
+            this.ClientSize = new System.Drawing.Size(1113, 620);
+            this.Controls.Add(this.PanelInicio);
             this.Controls.Add(this.PanelControles);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -176,6 +212,9 @@
             this.Load += new System.EventHandler(this.frmPlayer_Load);
             this.PanelControles.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.PanelInicio.ResumeLayout(false);
+            this.PanelInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,6 +229,9 @@
         private System.Windows.Forms.Button btnMusicasSalvas;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnManual;
+        private System.Windows.Forms.Panel PanelInicio;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
