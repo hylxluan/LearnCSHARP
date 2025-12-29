@@ -40,6 +40,8 @@
             this.PanelInicio = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.PanelControles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInicio.SuspendLayout();
@@ -158,7 +160,7 @@
             this.Logo.Image = global::LyriumPlayerV3.Properties.Resources.icons8_lírio_64;
             this.Logo.Location = new System.Drawing.Point(0, 0);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(197, 88);
+            this.Logo.Size = new System.Drawing.Size(197, 97);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
@@ -168,6 +170,8 @@
             this.PanelInicio.BackColor = System.Drawing.Color.Transparent;
             this.PanelInicio.Controls.Add(this.pictureBox1);
             this.PanelInicio.Controls.Add(this.label1);
+            this.PanelInicio.Controls.Add(this.btnPause);
+            this.PanelInicio.Controls.Add(this.btnPlay);
             this.PanelInicio.Location = new System.Drawing.Point(201, 12);
             this.PanelInicio.Name = "PanelInicio";
             this.PanelInicio.Size = new System.Drawing.Size(908, 596);
@@ -192,6 +196,42 @@
             this.label1.Size = new System.Drawing.Size(600, 85);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fila de Reprodução";
+            // 
+            // btnPause
+            // 
+            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPause.Image = global::LyriumPlayerV3.Properties.Resources.icons8_pausa_circular_50;
+            this.btnPause.Location = new System.Drawing.Point(393, 520);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(61, 59);
+            this.btnPause.TabIndex = 2;
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.Image = global::LyriumPlayerV3.Properties.Resources.icons8_play_dentro_de_um_círculo_50;
+            this.btnPlay.Location = new System.Drawing.Point(393, 520);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(61, 59);
+            this.btnPlay.TabIndex = 2;
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // frmPlayer
             // 
@@ -232,6 +272,8 @@
         private System.Windows.Forms.Panel PanelInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnPause;
     }
 }
 

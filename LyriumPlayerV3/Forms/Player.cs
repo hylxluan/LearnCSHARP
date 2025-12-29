@@ -126,5 +126,22 @@ namespace LyriumPlayerV3
             AtivarBotao((Button)sender);
         }
 
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            btnPlay.Visible = false;
+            btnPlay.Enabled = false;
+            btnPause.Visible = true;
+            btnPause.Enabled = true;
+            // proximas impls
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            btnPause.Visible = false;
+            btnPause.Enabled = false;
+            btnPlay.Visible = true;
+            btnPlay.Enabled = true;
+            // proximas impls
+        }
     }
 }

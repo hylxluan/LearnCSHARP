@@ -193,6 +193,26 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pausa_circular_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pausa-circular-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_play_dentro_de_um_círculo_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-play-dentro-de-um-círculo-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tocar_musica {
             get {
                 object obj = ResourceManager.GetObject("tocar-musica", resourceCulture);
