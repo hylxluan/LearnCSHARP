@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnProxima = new System.Windows.Forms.Button();
             this.btnPlayPause = new System.Windows.Forms.Button();
+            this.btnFaixaAleatoria = new System.Windows.Forms.Button();
             this.btnVoltarInicio = new System.Windows.Forms.Button();
             this.PanelControles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -173,6 +174,7 @@
             this.PanelInicio.Controls.Add(this.label1);
             this.PanelInicio.Controls.Add(this.btnProxima);
             this.PanelInicio.Controls.Add(this.btnPlayPause);
+            this.PanelInicio.Controls.Add(this.btnFaixaAleatoria);
             this.PanelInicio.Controls.Add(this.btnVoltarInicio);
             this.PanelInicio.Location = new System.Drawing.Point(201, 12);
             this.PanelInicio.Name = "PanelInicio";
@@ -211,7 +213,7 @@
             this.btnProxima.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProxima.ForeColor = System.Drawing.Color.Transparent;
             this.btnProxima.Image = global::LyriumPlayerV3.Properties.Resources.icons8_end_50;
-            this.btnProxima.Location = new System.Drawing.Point(502, 520);
+            this.btnProxima.Location = new System.Drawing.Point(501, 520);
             this.btnProxima.Name = "btnProxima";
             this.btnProxima.Size = new System.Drawing.Size(61, 59);
             this.btnProxima.TabIndex = 2;
@@ -229,12 +231,31 @@
             this.btnPlayPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayPause.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayPause.Image = global::LyriumPlayerV3.Properties.Resources.icons8_play_dentro_de_um_círculo_50;
-            this.btnPlayPause.Location = new System.Drawing.Point(390, 520);
+            this.btnPlayPause.Location = new System.Drawing.Point(383, 520);
             this.btnPlayPause.Name = "btnPlayPause";
             this.btnPlayPause.Size = new System.Drawing.Size(61, 59);
             this.btnPlayPause.TabIndex = 2;
             this.btnPlayPause.UseVisualStyleBackColor = false;
             this.btnPlayPause.Click += new System.EventHandler(this.btnPlayPause_Click);
+            // 
+            // btnFaixaAleatoria
+            // 
+            this.btnFaixaAleatoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFaixaAleatoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnFaixaAleatoria.FlatAppearance.BorderSize = 0;
+            this.btnFaixaAleatoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFaixaAleatoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFaixaAleatoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFaixaAleatoria.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFaixaAleatoria.Image = global::LyriumPlayerV3.Properties.Resources.icons8_embaralhar_50;
+            this.btnFaixaAleatoria.Location = new System.Drawing.Point(147, 520);
+            this.btnFaixaAleatoria.Name = "btnFaixaAleatoria";
+            this.btnFaixaAleatoria.Size = new System.Drawing.Size(61, 59);
+            this.btnFaixaAleatoria.TabIndex = 2;
+            this.btnFaixaAleatoria.UseVisualStyleBackColor = false;
+            this.btnFaixaAleatoria.MouseLeave += new System.EventHandler(this.btnFaixaAleatoria_MouseLeave);
+            this.btnFaixaAleatoria.MouseHover += new System.EventHandler(this.btnFaixaAleatoria_MouseHover);
             // 
             // btnVoltarInicio
             // 
@@ -247,7 +268,7 @@
             this.btnVoltarInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltarInicio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltarInicio.Image = global::LyriumPlayerV3.Properties.Resources.icons8_skip_to_start_50;
-            this.btnVoltarInicio.Location = new System.Drawing.Point(278, 520);
+            this.btnVoltarInicio.Location = new System.Drawing.Point(265, 520);
             this.btnVoltarInicio.Name = "btnVoltarInicio";
             this.btnVoltarInicio.Size = new System.Drawing.Size(61, 59);
             this.btnVoltarInicio.TabIndex = 2;
@@ -296,6 +317,7 @@
         private System.Windows.Forms.Button btnProxima;
         private System.Windows.Forms.Button btnVoltarInicio;
         private System.Windows.Forms.Button btnPlayPause;
+        private System.Windows.Forms.Button btnFaixaAleatoria;
     }
 }
 

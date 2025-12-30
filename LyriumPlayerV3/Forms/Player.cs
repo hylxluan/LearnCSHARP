@@ -152,5 +152,16 @@ namespace LyriumPlayerV3
             }
 
         }
+
+
+        private void btnFaixaAleatoria_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnFaixaAleatoria_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
     }
 }
