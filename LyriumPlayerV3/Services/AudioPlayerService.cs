@@ -13,9 +13,32 @@ namespace LyriumPlayerV3.Services
         public bool isPlaying { get; private set; }
         private IWavePlayer waveOutDevice;
         private AudioFileReader audioFileReader;
-        public string currentSongFilePath { get; private set; }
+        public string MusicaAtual { get; private set; }
 
 
+        public AudioPlayerService()
+        {
+            isPlaying = false;
+            MusicaAtual = string.Empty;
+        }
+
+        public void TocarFilaReproducao(string songFilePath)
+        {
+            try 
+            {
+                waveOutDevice = new WaveOutEvent();
+                audioFileReader = new AudioFileReader(songFilePath);
+                waveOutDevice.Init(audioFileReader);
+                waveOutDevice.Play();
+                isPlaying = true;
+                MusicaAtual = songFilePath;
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar o arquivo de áudio: " + ex.Message);
+            }
+
+        }
 
     }
 }
