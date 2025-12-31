@@ -243,9 +243,29 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_repetir_50_ativado {
+            get {
+                object obj = ResourceManager.GetObject("icons8-repetir-50-ativado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shuffle_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shuffle-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_shuffle_50_desativado {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shuffle-50-desativado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

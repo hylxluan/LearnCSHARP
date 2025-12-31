@@ -99,26 +99,33 @@ namespace LyriumPlayerV3
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabPlaylist;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabInicio;
+
+
         }
 
         private void btnMusicasSalvas_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabSalvas;
         }
 
         private void btnManual_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabManual;
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabConfig;
         }
 
         private void btnProxima_Click(object sender, EventArgs e)
@@ -152,7 +159,7 @@ namespace LyriumPlayerV3
         private void btnFaixaAleatoria_MouseHover(object sender, EventArgs e)
         {
             Button botao = (Button)sender;
-            
+
         }
 
         private void btnFaixaAleatoria_MouseLeave(object sender, EventArgs e)
