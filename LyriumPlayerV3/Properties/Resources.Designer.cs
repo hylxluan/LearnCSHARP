@@ -93,16 +93,6 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_embaralhar_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-embaralhar-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_end_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-end-50", resourceCulture);
@@ -226,6 +216,36 @@ namespace LyriumPlayerV3.Properties {
         internal static System.Drawing.Bitmap icons8_play_dentro_de_um_círculo_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-play-dentro-de-um-círculo-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ponto_final_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ponto-final-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_repetir_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-repetir-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_shuffle_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shuffle-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
