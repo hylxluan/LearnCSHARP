@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LyriumPlayerV3.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace LyriumPlayerV3
     public partial class frmPlayer : Form
     {
         private Button _botaoAtivo;
-
+        private AudioPlayerService _audioPlayerService = new AudioPlayerService();
         public frmPlayer()
         {
             InitializeComponent();

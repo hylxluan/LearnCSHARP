@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using NAudio.Wave;
 
 
@@ -10,7 +11,7 @@ namespace LyriumPlayerV3.Services
 {
     internal class AudioPlayerService
     {
-        public bool isPlaying { get; private set; }
+        public bool IsPlaying { get; private set; }
         private IWavePlayer waveOutDevice;
         private AudioFileReader audioFileReader;
         public string MusicaAtual { get; private set; }
@@ -18,27 +19,65 @@ namespace LyriumPlayerV3.Services
 
         public AudioPlayerService()
         {
-            isPlaying = false;
+            IsPlaying = false;
             MusicaAtual = string.Empty;
         }
 
-        public void TocarFilaReproducao(string songFilePath)
+        public void TocarReproducao(string songFilePath)
         {
             try 
             {
+                PararReproducao();
                 waveOutDevice = new WaveOutEvent();
                 audioFileReader = new AudioFileReader(songFilePath);
                 waveOutDevice.Init(audioFileReader);
                 waveOutDevice.Play();
-                isPlaying = true;
+                IsPlaying = true;
                 MusicaAtual = songFilePath;
 
             } catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar o arquivo de áudio: " + ex.Message);
+                throw new Exception($"Erro ao tocar música: {ex.Message}", ex);
             }
-
         }
 
+        public void PararReproducao()
+        {
+            if (waveOutDevice != null && waveOutDevice.PlaybackState == PlaybackState.Playing)
+            {
+                waveOutDevice.Stop();
+                waveOutDevice.Dispose();
+                waveOutDevice = null;
+                MusicaAtual = string.Empty;
+            }
+
+            if (audioFileReader != null)
+            {
+                audioFileReader.Dispose();
+                audioFileReader = null;
+            }
+
+            IsPlaying = false;
+            MusicaAtual = string.Empty;
+        }
+
+
+        public void PausarReproducao()
+        {
+            if (waveOutDevice != null && waveOutDevice.PlaybackState == PlaybackState.Playing)
+            {
+                waveOutDevice.Pause();
+                IsPlaying = false;
+            }
+        }
+
+        public void RetomarReproducao()
+        {
+            if (IsPlaying == false && waveOutDevice != null && waveOutDevice.PlaybackState == PlaybackState.Paused)
+            {
+                waveOutDevice.Play();
+                IsPlaying = true;
+            }
+        }
     }
 }
