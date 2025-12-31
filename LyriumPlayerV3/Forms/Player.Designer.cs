@@ -217,6 +217,7 @@
             this.btnProxima.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnProxima.BackColor = System.Drawing.Color.Transparent;
+            this.btnProxima.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProxima.FlatAppearance.BorderSize = 0;
             this.btnProxima.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProxima.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -236,6 +237,7 @@
             this.btnPlayPause.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlayPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlayPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlayPause.FlatAppearance.BorderSize = 0;
             this.btnPlayPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPlayPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -254,6 +256,7 @@
             this.btnRepetirFaixa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRepetirFaixa.BackColor = System.Drawing.Color.Transparent;
+            this.btnRepetirFaixa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRepetirFaixa.FlatAppearance.BorderSize = 0;
             this.btnRepetirFaixa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnRepetirFaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -272,6 +275,7 @@
             this.btnFaixaAleatoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnFaixaAleatoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnFaixaAleatoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFaixaAleatoria.FlatAppearance.BorderSize = 0;
             this.btnFaixaAleatoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnFaixaAleatoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -292,6 +296,7 @@
             this.btnVoltarInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVoltarInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltarInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltarInicio.FlatAppearance.BorderSize = 0;
             this.btnVoltarInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnVoltarInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

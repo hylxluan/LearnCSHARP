@@ -188,20 +188,19 @@ namespace LyriumPlayerV3
         private bool isRepeat = false;
         private void btnRepetirFaixa_Click_1(object sender, EventArgs e)
         {
-            
-            isRepeat = !isRepeat;
 
+            isRepeat = !isRepeat;
             if (isRepeat)
             {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50_ativado;
-
-                }
-                else
-                {
+                
+            }
+            else
+            {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50;
                 
-                }
-        }
-
             }
         }
+
+    }
+}
