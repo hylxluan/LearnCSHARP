@@ -20,11 +20,6 @@ namespace LyriumPlayerV3
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pnlIndicador_Paint(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
@@ -156,12 +151,91 @@ namespace LyriumPlayerV3
 
         private void btnFaixaAleatoria_MouseHover(object sender, EventArgs e)
         {
+            Button botao = (Button)sender;
             
         }
 
         private void btnFaixaAleatoria_MouseLeave(object sender, EventArgs e)
         {
+            Button botao = (Button)sender;
+        }
 
+        private void AnimaBotaoHover(Button botao, Size tamanhoInicial, Size tamanhoFinal)
+        {
+            AnimarBotao(botao, tamanhoInicial, tamanhoFinal);
+        }
+
+
+
+        private bool isRandom = false;
+        private void btnFaixaAleatoria_Click(object sender, EventArgs e)
+        {
+            isRandom = !isRandom;
+
+            if (isRandom)
+            {
+                btnFaixaAleatoria.Image = Properties.Resources.icons8_shuffle_50;
+            }
+            else
+            {
+                btnFaixaAleatoria.Image = Properties.Resources.icons8_shuffle_50_desativado;
+            }
+        }
+
+        private void AnimarBotao(Button botao, Size tamanhoInicial, Size tamanhoFinal)
+        {
+            
+            if (botao.Tag is Timer timer)
+            {
+                timer.Stop();
+                timer.Dispose();
+            }
+
+            Timer animationTimer = new Timer { Interval = 10 };
+            int passos = 15;
+            int contador = 0;
+            float larguraInicial = tamanhoInicial.Width;
+            float alturaInicial = tamanhoInicial.Height;
+            float larguraFinal = tamanhoFinal.Width;
+            float alturaFinal = tamanhoFinal.Height;
+
+            animationTimer.Tick += (s, e) =>
+            {
+                if (contador < passos)
+                {
+                    float progresso = (float)contador / passos;
+                    botao.Width = (int)(larguraInicial + (larguraFinal - larguraInicial) * progresso);
+                    botao.Height = (int)(alturaInicial + (alturaFinal - alturaInicial) * progresso);
+                    contador++;
+                }
+                else
+                {
+                    botao.Width = (int)larguraFinal;
+                    botao.Height = (int)alturaFinal;
+                    animationTimer.Stop();
+                    animationTimer.Dispose();
+                }
+            };
+
+            animationTimer.Start();
+        }
+
+        private bool isRepeat = false;
+        private void btnRepetirFaixa_Click_1(object sender, EventArgs e)
+        {
+
+            isRepeat = !isRepeat;
+
+            if (isRepeat)
+            {
+                btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50_ativado;
+                
+            }
+            else
+            {
+                btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50;
+                
+            }
         }
     }
 }
