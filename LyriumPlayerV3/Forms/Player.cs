@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LyriumPlayerV3
 {
     public partial class frmPlayer : Form
     {
         private Button _botaoAtivo;
         private AudioPlayerService _audioPlayerService = new AudioPlayerService();
+        List<string> musicFiles = new List<string>();
         public frmPlayer()
         {
             InitializeComponent();
@@ -147,6 +149,7 @@ namespace LyriumPlayerV3
 
             if (isPlaying)
             {
+                
                 btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
             }
             else
