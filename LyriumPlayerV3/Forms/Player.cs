@@ -1,16 +1,9 @@
 ﻿using LyriumPlayerV3.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-
 
 namespace LyriumPlayerV3
 {
@@ -18,11 +11,16 @@ namespace LyriumPlayerV3
     {
         private Button _botaoAtivo;
         private AudioPlayerService _audioPlayerService = new AudioPlayerService();
-        List<string> musicFiles = new List<string>();
+        private List<string> musicFiles = new List<string>();
 
         public frmPlayer()
         {
             InitializeComponent();
+        }
+
+        private void frmPlayer_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void pnlIndicador_Paint(object sender, PaintEventArgs e)
@@ -30,8 +28,7 @@ namespace LyriumPlayerV3
             Panel panel = (Panel)sender;
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-            // Criar forma arredondada
-            int radius = 3; // Raio das bordas
+            int radius = 3;
             Rectangle rect = new Rectangle(0, 0, panel.Width - 1, panel.Height - 1);
 
             using (GraphicsPath path = new GraphicsPath())
@@ -42,17 +39,14 @@ namespace LyriumPlayerV3
                 path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90);
                 path.CloseFigure();
 
-                // Aplicar região arredondada
                 panel.Region = new Region(path);
 
-                // Preencher com a cor
                 using (SolidBrush brush = new SolidBrush(panel.BackColor))
                 {
                     e.Graphics.FillPath(brush, path);
                 }
             }
         }
-
 
         private void AtivarBotao(Button botao)
         {
@@ -95,23 +89,16 @@ namespace LyriumPlayerV3
             animationTimer.Start();
         }
 
-        private void frmPlayer_Load(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
-            CarregarMusicas();
+            AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabInicio;
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
             AtivarBotao((Button)sender);
             TabPaginas.SelectedTab = TabPlaylist;
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            AtivarBotao((Button)sender);
-            TabPaginas.SelectedTab = TabInicio;
-
-
         }
 
         private void btnMusicasSalvas_Click(object sender, EventArgs e)
@@ -132,6 +119,28 @@ namespace LyriumPlayerV3
             TabPaginas.SelectedTab = TabConfig;
         }
 
+        private void btnPlayPause_Click(object sender, EventArgs e)
+        {
+            if (_audioPlayerService.IsPlaying)
+            {
+                //_audioPlayerService.PausarReproducao();
+                btnPlayPause.Image = Properties.Resources.icons8_play_dentro_de_um_círculo_50;
+            }
+            else
+            {
+                if (_audioPlayerService.IsPlaying == false && string.IsNullOrEmpty(_audioPlayerService.MusicaAtual))
+                {
+                    //_audioPlayerService.TocarReproducao(musicFiles[0]);
+                    btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
+                }
+                else
+                {
+                    //_audioPlayerService.RetomarReproducao();
+                    btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
+                }
+            }
+        }
+
         private void btnProxima_Click(object sender, EventArgs e)
         {
 
@@ -141,38 +150,6 @@ namespace LyriumPlayerV3
         {
 
         }
-
-        
-        private void btnPlayPause_Click(object sender, EventArgs e)
-        {
-
-            if (_audioPlayerService.IsPlaying)
-            {
-                _audioPlayerService.PausarReproducao();
-                btnPlayPause.Image = Properties.Resources.icons8_play_dentro_de_um_círculo_50;
-
-            }
-            else
-            {
-                if (_audioPlayerService.IsPlaying == false && string.IsNullOrEmpty(_audioPlayerService.MusicaAtual))
-                {
-                    _audioPlayerService.TocarReproducao(musicFiles[0]);
-                    btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
-                }
-                else 
-                {
-
-                    _audioPlayerService.RetomarReproducao();
-                    btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
-
-                }
-
-            }
-
-        }
-
-
-
 
         private bool isRandom = false;
         private void btnFaixaAleatoria_Click(object sender, EventArgs e)
@@ -192,39 +169,16 @@ namespace LyriumPlayerV3
         private bool isRepeat = false;
         private void btnRepetirFaixa_Click_1(object sender, EventArgs e)
         {
+            
 
-            isRepeat = !isRepeat;
             if (isRepeat)
             {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50_ativado;
-                
             }
             else
             {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50;
-                
             }
         }
-
-        private void CarregarMusicas()
-        {
-            try 
-            {
-
-                string musicFolderPath = Application.StartupPath;
-                string[] files = Directory.GetFiles(musicFolderPath, "*.mp3", SearchOption.TopDirectoryOnly);
-                musicFiles.Clear();
-                musicFiles.AddRange(files);
-                musicFiles.Sort();
-
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar músicas: " + ex.Message);
-            }
-        }
-
     }
 }
