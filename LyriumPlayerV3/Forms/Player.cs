@@ -159,7 +159,6 @@ namespace LyriumPlayerV3
                     _audioPlayerService.TocarReproducao(musicFiles[0]);
                     btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
                 }
-
                 else 
                 {
 
