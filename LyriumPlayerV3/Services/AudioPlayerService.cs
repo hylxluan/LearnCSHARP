@@ -12,9 +12,11 @@ namespace LyriumPlayerV3.Services
     internal class AudioPlayerService
     {
         public bool IsPlaying { get; private set; }
+        public string MusicaAtual { get; private set; }
+
         private IWavePlayer waveOutDevice;
         private AudioFileReader audioFileReader;
-        public string MusicaAtual { get; private set; }
+        
 
 
         public AudioPlayerService()
@@ -48,7 +50,6 @@ namespace LyriumPlayerV3.Services
                 waveOutDevice.Stop();
                 waveOutDevice.Dispose();
                 waveOutDevice = null;
-                MusicaAtual = string.Empty;
             }
 
             if (audioFileReader != null)

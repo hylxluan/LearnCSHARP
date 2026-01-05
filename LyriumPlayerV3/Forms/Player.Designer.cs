@@ -288,8 +288,6 @@
             this.btnFaixaAleatoria.TabIndex = 2;
             this.btnFaixaAleatoria.UseVisualStyleBackColor = false;
             this.btnFaixaAleatoria.Click += new System.EventHandler(this.btnFaixaAleatoria_Click);
-            this.btnFaixaAleatoria.MouseLeave += new System.EventHandler(this.btnFaixaAleatoria_MouseLeave);
-            this.btnFaixaAleatoria.MouseHover += new System.EventHandler(this.btnFaixaAleatoria_MouseHover);
             // 
             // btnVoltarInicio
             // 
