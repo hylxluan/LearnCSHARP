@@ -180,5 +180,12 @@ namespace LyriumPlayerV3
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50;
             }
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            AtivarBotao((Button)sender);
+            TabPaginas.SelectedTab = TabDashboard;
+        }
+
     }
 }

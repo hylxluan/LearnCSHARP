@@ -103,6 +103,36 @@ namespace LyriumPlayerV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gráfico_de_barras_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gráfico-de-barras-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gráfico_de_barras_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gráfico-de-barras-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gráfico_de_barras_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gráfico-de-barras-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_lírio_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-lírio-64", resourceCulture);
@@ -146,6 +176,16 @@ namespace LyriumPlayerV3.Properties {
         internal static System.Drawing.Bitmap icons8_manual_do_usuário_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-manual-do-usuário-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_métricas_de_laptop_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-métricas-de-laptop-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

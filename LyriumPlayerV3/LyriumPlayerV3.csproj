@@ -159,6 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons8-end-50.png" />
+    <None Include="Resources\icons8-gráfico-de-barras-50.png" />
+    <None Include="Resources\icons8-gráfico-de-barras-48.png" />
+    <None Include="Resources\icons8-métricas-de-laptop-50.png" />
+    <None Include="Resources\icons8-gráfico-de-barras-24.png" />
     <Content Include="Resources\icons8-pausa-circular-50.png" />
     <Content Include="Resources\icons8-play-dentro-de-um-círculo-50.png" />
     <Content Include="Resources\icons8-ponto-final-24.png" />
