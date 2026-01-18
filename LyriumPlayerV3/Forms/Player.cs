@@ -1,6 +1,7 @@
 ﻿using LyriumPlayerV3.Services;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -132,6 +133,33 @@ namespace LyriumPlayerV3
                 {
                     //_audioPlayerService.TocarReproducao(musicFiles[0]);
                     btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
+                    try
+                    {
+                        var dbService = new DatabaseService();
+
+                        using (var conexao = dbService.GetConexao())
+                        {
+
+                            MessageBox.Show(
+                                    $"Conectado com sucesso!\n\n" +
+                                    $"Banco: {dbService.GetCaminhoBanco()}\n",
+                                    "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(
+                            $"Erro ao conectar:\n{ex.Message}",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+
                 }
                 else
                 {

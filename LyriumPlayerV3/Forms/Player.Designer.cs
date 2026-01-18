@@ -39,6 +39,8 @@
             this.pnlIndicador = new System.Windows.Forms.Panel();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.PanelInicio = new System.Windows.Forms.Panel();
+            this.labelMusica = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnProxima = new System.Windows.Forms.Button();
@@ -198,6 +200,8 @@
             // PanelInicio
             // 
             this.PanelInicio.BackColor = System.Drawing.Color.Transparent;
+            this.PanelInicio.Controls.Add(this.labelMusica);
+            this.PanelInicio.Controls.Add(this.label2);
             this.PanelInicio.Controls.Add(this.pictureBox1);
             this.PanelInicio.Controls.Add(this.label1);
             this.PanelInicio.Controls.Add(this.btnProxima);
@@ -211,10 +215,30 @@
             this.PanelInicio.Size = new System.Drawing.Size(918, 691);
             this.PanelInicio.TabIndex = 1;
             // 
+            // labelMusica
+            // 
+            this.labelMusica.AutoSize = true;
+            this.labelMusica.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMusica.Location = new System.Drawing.Point(163, 450);
+            this.labelMusica.Name = "labelMusica";
+            this.labelMusica.Size = new System.Drawing.Size(332, 21);
+            this.labelMusica.TabIndex = 4;
+            this.labelMusica.Text = "Não há nenhum som tocando, meu nobre!";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 442);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 31);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tocando:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LyriumPlayerV3.Properties.Resources.tocar_musica;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 175);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 160);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(440, 247);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -225,7 +249,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MV Boli", 56.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 23);
+            this.label1.Location = new System.Drawing.Point(95, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(703, 98);
             this.label1.TabIndex = 2;
@@ -244,7 +268,7 @@
             this.btnProxima.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProxima.ForeColor = System.Drawing.Color.Transparent;
             this.btnProxima.Image = global::LyriumPlayerV3.Properties.Resources.icons8_end_50;
-            this.btnProxima.Location = new System.Drawing.Point(521, 550);
+            this.btnProxima.Location = new System.Drawing.Point(523, 550);
             this.btnProxima.Name = "btnProxima";
             this.btnProxima.Size = new System.Drawing.Size(61, 174);
             this.btnProxima.TabIndex = 2;
@@ -263,7 +287,7 @@
             this.btnPlayPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayPause.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayPause.Image = global::LyriumPlayerV3.Properties.Resources.icons8_play_dentro_de_um_círculo_50;
-            this.btnPlayPause.Location = new System.Drawing.Point(392, 550);
+            this.btnPlayPause.Location = new System.Drawing.Point(394, 550);
             this.btnPlayPause.Name = "btnPlayPause";
             this.btnPlayPause.Size = new System.Drawing.Size(61, 174);
             this.btnPlayPause.TabIndex = 2;
@@ -282,7 +306,7 @@
             this.btnRepetirFaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepetirFaixa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepetirFaixa.Image = global::LyriumPlayerV3.Properties.Resources.icons8_repetir_50;
-            this.btnRepetirFaixa.Location = new System.Drawing.Point(650, 550);
+            this.btnRepetirFaixa.Location = new System.Drawing.Point(652, 550);
             this.btnRepetirFaixa.Name = "btnRepetirFaixa";
             this.btnRepetirFaixa.Size = new System.Drawing.Size(61, 174);
             this.btnRepetirFaixa.TabIndex = 2;
@@ -301,7 +325,7 @@
             this.btnFaixaAleatoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFaixaAleatoria.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaixaAleatoria.Image = global::LyriumPlayerV3.Properties.Resources.icons8_shuffle_50_desativado;
-            this.btnFaixaAleatoria.Location = new System.Drawing.Point(134, 550);
+            this.btnFaixaAleatoria.Location = new System.Drawing.Point(136, 550);
             this.btnFaixaAleatoria.Name = "btnFaixaAleatoria";
             this.btnFaixaAleatoria.Size = new System.Drawing.Size(61, 174);
             this.btnFaixaAleatoria.TabIndex = 2;
@@ -320,7 +344,7 @@
             this.btnVoltarInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltarInicio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltarInicio.Image = global::LyriumPlayerV3.Properties.Resources.icons8_skip_to_start_50;
-            this.btnVoltarInicio.Location = new System.Drawing.Point(263, 550);
+            this.btnVoltarInicio.Location = new System.Drawing.Point(265, 550);
             this.btnVoltarInicio.Name = "btnVoltarInicio";
             this.btnVoltarInicio.Size = new System.Drawing.Size(61, 174);
             this.btnVoltarInicio.TabIndex = 2;
@@ -360,7 +384,7 @@
             this.TabPlaylist.Location = new System.Drawing.Point(4, 4);
             this.TabPlaylist.Name = "TabPlaylist";
             this.TabPlaylist.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPlaylist.Size = new System.Drawing.Size(924, 714);
+            this.TabPlaylist.Size = new System.Drawing.Size(924, 697);
             this.TabPlaylist.TabIndex = 1;
             this.TabPlaylist.Text = "TabPlaylist";
             this.TabPlaylist.UseVisualStyleBackColor = true;
@@ -369,7 +393,7 @@
             // 
             this.TabSalvas.Location = new System.Drawing.Point(4, 4);
             this.TabSalvas.Name = "TabSalvas";
-            this.TabSalvas.Size = new System.Drawing.Size(924, 714);
+            this.TabSalvas.Size = new System.Drawing.Size(924, 697);
             this.TabSalvas.TabIndex = 2;
             this.TabSalvas.Text = "TabSalvas";
             this.TabSalvas.UseVisualStyleBackColor = true;
@@ -378,7 +402,7 @@
             // 
             this.TabDashboard.Location = new System.Drawing.Point(4, 4);
             this.TabDashboard.Name = "TabDashboard";
-            this.TabDashboard.Size = new System.Drawing.Size(924, 714);
+            this.TabDashboard.Size = new System.Drawing.Size(924, 697);
             this.TabDashboard.TabIndex = 5;
             this.TabDashboard.Text = "TabDashboard";
             this.TabDashboard.UseVisualStyleBackColor = true;
@@ -387,7 +411,7 @@
             // 
             this.TabManual.Location = new System.Drawing.Point(4, 4);
             this.TabManual.Name = "TabManual";
-            this.TabManual.Size = new System.Drawing.Size(924, 714);
+            this.TabManual.Size = new System.Drawing.Size(924, 697);
             this.TabManual.TabIndex = 3;
             this.TabManual.Text = "TabManual";
             this.TabManual.UseVisualStyleBackColor = true;
@@ -396,7 +420,7 @@
             // 
             this.TabConfig.Location = new System.Drawing.Point(4, 4);
             this.TabConfig.Name = "TabConfig";
-            this.TabConfig.Size = new System.Drawing.Size(924, 714);
+            this.TabConfig.Size = new System.Drawing.Size(924, 697);
             this.TabConfig.TabIndex = 4;
             this.TabConfig.Text = "TabConfig";
             this.TabConfig.UseVisualStyleBackColor = true;
@@ -455,6 +479,8 @@
         private System.Windows.Forms.TabPage TabConfig;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.TabPage TabDashboard;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelMusica;
     }
 }
 
