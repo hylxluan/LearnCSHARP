@@ -10,8 +10,6 @@ namespace LyriumPlayerV3.Services
     internal class DatabaseService
     {
 
-        private readonly string _connectionString;
-        private readonly SQLiteConnection _connection;
         private readonly string _caminhoBanco;
 
 
