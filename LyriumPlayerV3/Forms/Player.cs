@@ -133,32 +133,6 @@ namespace LyriumPlayerV3
                 {
                     //_audioPlayerService.TocarReproducao(musicFiles[0]);
                     btnPlayPause.Image = Properties.Resources.icons8_pausa_circular_50;
-                    try
-                    {
-                        var dbService = new DatabaseService();
-
-                        using (var conexao = dbService.GetConexao())
-                        {
-
-                            MessageBox.Show(
-                                    $"Conectado com sucesso!\n\n" +
-                                    $"Banco: {dbService.GetCaminhoBanco()}\n",
-                                    "Sucesso",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information
-                                );
-
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(
-                            $"Erro ao conectar:\n{ex.Message}",
-                            "Erro",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                    }
 
                 }
                 else
@@ -198,7 +172,6 @@ namespace LyriumPlayerV3
         private void btnRepetirFaixa_Click_1(object sender, EventArgs e)
         {
             
-
             if (isRepeat)
             {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50_ativado;
