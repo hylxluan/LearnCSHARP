@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Windows.Forms;
 
 namespace LyriumPlayerV3
@@ -12,6 +13,7 @@ namespace LyriumPlayerV3
     {
         private Button _botaoAtivo;
         private AudioPlayerService _audioPlayerService = new AudioPlayerService();
+        private DatabaseService _databaseService = new DatabaseService();
         private List<string> musicFiles = new List<string>();
 
         public frmPlayer()
@@ -21,7 +23,9 @@ namespace LyriumPlayerV3
 
         private void frmPlayer_Load(object sender, EventArgs e)
         {
-
+            dgListaSalvas.DataSource = _databaseService.ListarMusicas();
+            dgListaSalvas.ClearSelection();
+            PintarBotaoDeBuscarMusica();
         }
 
         private void pnlIndicador_Paint(object sender, PaintEventArgs e)
@@ -171,7 +175,8 @@ namespace LyriumPlayerV3
         private bool isRepeat = false;
         private void btnRepetirFaixa_Click_1(object sender, EventArgs e)
         {
-            
+            isRepeat = !isRepeat;
+
             if (isRepeat)
             {
                 btnRepetirFaixa.Image = Properties.Resources.icons8_repetir_50_ativado;
@@ -188,5 +193,42 @@ namespace LyriumPlayerV3
             TabPaginas.SelectedTab = TabDashboard;
         }
 
+        private void PintarBotaoDeBuscarMusica()
+        {
+            btnBuscarMusica.FlatStyle = FlatStyle.Flat;
+            btnBuscarMusica.FlatAppearance.BorderColor = Color.Gray;
+            btnBuscarMusica.FlatAppearance.BorderSize = 1;
+            btnBuscarMusica.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 220, 220);
+            btnBuscarMusica.FlatAppearance.MouseDownBackColor = Color.FromArgb(180, 180, 180); 
+        }
+
+        private void btnBuscarMusica_Click(object sender, EventArgs e)
+        {
+            using OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Title = "Selecione uma música";
+            fileDialog.Filter = "Arquivos de Áudio|*.mp3;*.wav";
+            fileDialog.Multiselect = false;
+            fileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = fileDialog.FileName;
+                CopiarMusicaParaPasta(selectedFile);
+            }
+
+        }
+
+        private void CopiarMusicaParaPasta(string caminhoMusica)
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string musicDirectory = Path.Combine(baseDirectory, "Musicas");
+            if (!Directory.Exists(musicDirectory))
+            {
+                Directory.CreateDirectory(musicDirectory);
+            }
+            string fileName = Path.GetFileName(caminhoMusica);
+            string destinationPath = Path.Combine(musicDirectory, fileName);
+            File.Copy(caminhoMusica, destinationPath, true);
+        }
     }
 }

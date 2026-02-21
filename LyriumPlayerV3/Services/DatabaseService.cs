@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Data.SQLite;
 using LyriumPlayerV3.Models;
+using System.Data;
+
 
 namespace LyriumPlayerV3.Services
 {
@@ -35,27 +37,19 @@ namespace LyriumPlayerV3.Services
             return _caminhoBanco;
         }
 
-        public List<Musica> ListarMusicas() 
+        public DataTable ListarMusicas() 
         {
-            List<Musica> musicas = new List<Musica>();
+            DataTable musicas = new DataTable();
+
 
             using (var conexao = GetConexao()) 
             {
-                string query = @"SELECT Id, NomeArquivo, Artista, Album, Duracao FROM Musicas";
+                string query = @"SELECT id, nome_arquivo, artista, album, duracao, numero_reproducoes FROM musicas";
                 using (var cmd = new SQLiteCommand(query, conexao))
                 using (var reader = cmd.ExecuteReader()) 
-                { 
-                    while (reader.Read())
-                    {
-                        musicas.Add(new Musica
-                        {
-                            Id = reader.GetInt32(0),
-                            NomeArquivo = reader.GetString(1),
-                            Artista = reader.GetString(2),
-                            Album = reader.GetString(3),
-                            Duracao = TimeSpan.FromSeconds(reader.GetInt32(4))
-                        });
-                    }
+                {
+                    musicas.Load(reader);
+                   
                 }
 
 
