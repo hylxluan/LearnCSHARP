@@ -12,6 +12,7 @@ namespace LyriumPlayerV3
     public partial class frmPlayer : Form
     {
         private Button _botaoAtivo;
+        private string _caminhoMusicaSalva;
         private AudioPlayerService _audioPlayerService = new AudioPlayerService();
         private DatabaseService _databaseService = new DatabaseService();
         private List<string> musicFiles = new List<string>();
@@ -19,12 +20,12 @@ namespace LyriumPlayerV3
         public frmPlayer()
         {
             InitializeComponent();
+            
         }
 
         private void frmPlayer_Load(object sender, EventArgs e)
         {
             dgListaSalvas.DataSource = _databaseService.ListarMusicas();
-            dgListaSalvas.ClearSelection();
             PintarBotaoDeBuscarMusica();
         }
 
@@ -110,6 +111,7 @@ namespace LyriumPlayerV3
         {
             AtivarBotao((Button)sender);
             TabPaginas.SelectedTab = TabSalvas;
+            dgListaSalvas.ClearSelection();
         }
 
         private void btnManual_Click(object sender, EventArgs e)
@@ -199,7 +201,7 @@ namespace LyriumPlayerV3
             btnBuscarMusica.FlatAppearance.BorderColor = Color.Gray;
             btnBuscarMusica.FlatAppearance.BorderSize = 1;
             btnBuscarMusica.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 220, 220);
-            btnBuscarMusica.FlatAppearance.MouseDownBackColor = Color.FromArgb(180, 180, 180); 
+            btnBuscarMusica.FlatAppearance.MouseDownBackColor = Color.FromArgb(180, 180, 180);
         }
 
         private void btnBuscarMusica_Click(object sender, EventArgs e)
@@ -212,8 +214,7 @@ namespace LyriumPlayerV3
 
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
-                string selectedFile = fileDialog.FileName;
-                CopiarMusicaParaPasta(selectedFile);
+                _caminhoMusicaSalva = fileDialog.FileName;
             }
 
         }
@@ -229,6 +230,42 @@ namespace LyriumPlayerV3
             string fileName = Path.GetFileName(caminhoMusica);
             string destinationPath = Path.Combine(musicDirectory, fileName);
             File.Copy(caminhoMusica, destinationPath, true);
+        }
+
+        private void btnSalvarMusica_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtArtista.Text) ||
+                string.IsNullOrWhiteSpace(txtAlbum.Text) ||
+                string.IsNullOrWhiteSpace(_caminhoMusicaSalva)) 
+            { 
+                MessageBox.Show("Por favor, preencha todos os campos e selecione uma música antes de salvar.", "Campos Obrigatórios!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            CopiarMusicaParaPasta(_caminhoMusicaSalva);
+
+            _databaseService.SalvarMusica(txtArtista.Text, txtAlbum.Text, _caminhoMusicaSalva);
+
+        }
+
+        private void btnEditarMusica_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeletarMusica_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabSalvas_Click(object sender, EventArgs e)
+        {
+            dgListaSalvas.ClearSelection();
+        }
+
+        private void groupDataSongs_Enter(object sender, EventArgs e)
+        {
+            dgListaSalvas.ClearSelection();
         }
     }
 }

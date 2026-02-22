@@ -65,7 +65,11 @@
             this.TabInicio = new System.Windows.Forms.TabPage();
             this.TabPlaylist = new System.Windows.Forms.TabPage();
             this.TabSalvas = new System.Windows.Forms.TabPage();
+            this.btnDeletarMusica = new System.Windows.Forms.Button();
+            this.btnEditarMusica = new System.Windows.Forms.Button();
+            this.btnSalvarMusica = new System.Windows.Forms.Button();
             this.groupDataSongs = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnBuscarMusica = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,7 +111,7 @@
             this.PanelControles.Controls.Add(this.Logo);
             this.PanelControles.Location = new System.Drawing.Point(-2, -2);
             this.PanelControles.Name = "PanelControles";
-            this.PanelControles.Size = new System.Drawing.Size(197, 780);
+            this.PanelControles.Size = new System.Drawing.Size(197, 707);
             this.PanelControles.TabIndex = 0;
             // 
             // btnConfig
@@ -461,6 +465,9 @@
             // 
             this.TabSalvas.BackgroundImage = global::LyriumPlayerV3.Properties.Resources.gradiente;
             this.TabSalvas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TabSalvas.Controls.Add(this.btnDeletarMusica);
+            this.TabSalvas.Controls.Add(this.btnEditarMusica);
+            this.TabSalvas.Controls.Add(this.btnSalvarMusica);
             this.TabSalvas.Controls.Add(this.groupDataSongs);
             this.TabSalvas.Controls.Add(this.dgListaSalvas);
             this.TabSalvas.Location = new System.Drawing.Point(4, 4);
@@ -469,9 +476,65 @@
             this.TabSalvas.TabIndex = 2;
             this.TabSalvas.Text = "TabSalvas";
             this.TabSalvas.UseVisualStyleBackColor = true;
+            this.TabSalvas.Click += new System.EventHandler(this.TabSalvas_Click);
+            // 
+            // btnDeletarMusica
+            // 
+            this.btnDeletarMusica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletarMusica.BackColor = System.Drawing.Color.White;
+            this.btnDeletarMusica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletarMusica.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletarMusica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnDeletarMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnDeletarMusica.Location = new System.Drawing.Point(747, 625);
+            this.btnDeletarMusica.Name = "btnDeletarMusica";
+            this.btnDeletarMusica.Size = new System.Drawing.Size(156, 35);
+            this.btnDeletarMusica.TabIndex = 8;
+            this.btnDeletarMusica.TabStop = false;
+            this.btnDeletarMusica.Text = "Deletar Música";
+            this.btnDeletarMusica.UseVisualStyleBackColor = false;
+            this.btnDeletarMusica.Click += new System.EventHandler(this.btnDeletarMusica_Click);
+            // 
+            // btnEditarMusica
+            // 
+            this.btnEditarMusica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarMusica.BackColor = System.Drawing.Color.White;
+            this.btnEditarMusica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarMusica.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditarMusica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnEditarMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnEditarMusica.Location = new System.Drawing.Point(563, 627);
+            this.btnEditarMusica.Name = "btnEditarMusica";
+            this.btnEditarMusica.Size = new System.Drawing.Size(156, 35);
+            this.btnEditarMusica.TabIndex = 8;
+            this.btnEditarMusica.TabStop = false;
+            this.btnEditarMusica.Text = "Editar Música";
+            this.btnEditarMusica.UseVisualStyleBackColor = false;
+            this.btnEditarMusica.Click += new System.EventHandler(this.btnEditarMusica_Click);
+            // 
+            // btnSalvarMusica
+            // 
+            this.btnSalvarMusica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvarMusica.BackColor = System.Drawing.Color.White;
+            this.btnSalvarMusica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarMusica.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalvarMusica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnSalvarMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnSalvarMusica.Location = new System.Drawing.Point(379, 627);
+            this.btnSalvarMusica.Name = "btnSalvarMusica";
+            this.btnSalvarMusica.Size = new System.Drawing.Size(156, 35);
+            this.btnSalvarMusica.TabIndex = 8;
+            this.btnSalvarMusica.TabStop = false;
+            this.btnSalvarMusica.Text = "Incluir Música";
+            this.btnSalvarMusica.UseVisualStyleBackColor = false;
+            this.btnSalvarMusica.Click += new System.EventHandler(this.btnSalvarMusica_Click);
             // 
             // groupDataSongs
             // 
+            this.groupDataSongs.Controls.Add(this.button2);
             this.groupDataSongs.Controls.Add(this.btnBuscarMusica);
             this.groupDataSongs.Controls.Add(this.label5);
             this.groupDataSongs.Controls.Add(this.label4);
@@ -484,6 +547,25 @@
             this.groupDataSongs.TabIndex = 4;
             this.groupDataSongs.TabStop = false;
             this.groupDataSongs.Text = "Dados da Música";
+            this.groupDataSongs.Enter += new System.EventHandler(this.groupDataSongs_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button2.Location = new System.Drawing.Point(184, 638);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 35);
+            this.button2.TabIndex = 8;
+            this.button2.TabStop = false;
+            this.button2.Text = "Buscar Música";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnBuscarMusica_Click);
             // 
             // btnBuscarMusica
             // 
@@ -560,11 +642,11 @@
             this.dgListaSalvas.BackgroundColor = System.Drawing.Color.White;
             this.dgListaSalvas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgListaSalvas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgListaSalvas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -576,11 +658,11 @@
             this.duracao,
             this.numero_reproducoes});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgListaSalvas.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgListaSalvas.EnableHeadersVisualStyles = false;
@@ -598,6 +680,7 @@
             this.dgListaSalvas.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgListaSalvas.RowHeadersVisible = false;
             this.dgListaSalvas.RowHeadersWidth = 4;
+            this.dgListaSalvas.RowTemplate.Height = 35;
             this.dgListaSalvas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgListaSalvas.Size = new System.Drawing.Size(900, 347);
             this.dgListaSalvas.TabIndex = 0;
@@ -606,10 +689,9 @@
             // 
             this.id.DataPropertyName = "id";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
             this.id.DefaultCellStyle = dataGridViewCellStyle3;
             this.id.HeaderText = "N°";
             this.id.Name = "id";
@@ -619,6 +701,7 @@
             // 
             this.titulo.DataPropertyName = "nome_arquivo";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.titulo.DefaultCellStyle = dataGridViewCellStyle4;
             this.titulo.HeaderText = "Título";
@@ -630,6 +713,7 @@
             // 
             this.artista.DataPropertyName = "artista";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.artista.DefaultCellStyle = dataGridViewCellStyle5;
             this.artista.HeaderText = "Artista";
@@ -641,6 +725,7 @@
             // 
             this.album.DataPropertyName = "album";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.album.DefaultCellStyle = dataGridViewCellStyle6;
             this.album.HeaderText = "Álbum";
@@ -652,6 +737,7 @@
             // 
             this.duracao.DataPropertyName = "duracao";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.duracao.DefaultCellStyle = dataGridViewCellStyle7;
             this.duracao.HeaderText = "Duração";
@@ -662,6 +748,7 @@
             // 
             this.numero_reproducoes.DataPropertyName = "numero_reproducoes";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.Format = "N0";
             dataGridViewCellStyle8.NullValue = null;
             dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -703,7 +790,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LyriumPlayerV3.Properties.Resources.gradiente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1113, 770);
+            this.ClientSize = new System.Drawing.Size(1113, 697);
             this.Controls.Add(this.PanelControles);
             this.Controls.Add(this.TabPaginas);
             this.DoubleBuffered = true;
@@ -761,18 +848,22 @@
         private System.Windows.Forms.Label lblMin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgListaSalvas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn album;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero_reproducoes;
         private System.Windows.Forms.GroupBox groupDataSongs;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAlbum;
         private System.Windows.Forms.TextBox txtArtista;
         private System.Windows.Forms.Button btnBuscarMusica;
+        private System.Windows.Forms.Button btnDeletarMusica;
+        private System.Windows.Forms.Button btnEditarMusica;
+        private System.Windows.Forms.Button btnSalvarMusica;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn album;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero_reproducoes;
     }
 }
 

@@ -7,6 +7,8 @@ using System.IO;
 using System.Data.SQLite;
 using LyriumPlayerV3.Models;
 using System.Data;
+using NAudio.Wave;
+using System.Windows.Forms;
 
 
 namespace LyriumPlayerV3.Services
@@ -28,7 +30,7 @@ namespace LyriumPlayerV3.Services
         public SQLiteConnection GetConexao()
         {
             var conexao = new SQLiteConnection(_conexaoString);
-            conexao.Open(); 
+            conexao.Open();
             return conexao;
         }
 
@@ -37,19 +39,19 @@ namespace LyriumPlayerV3.Services
             return _caminhoBanco;
         }
 
-        public DataTable ListarMusicas() 
+        public DataTable ListarMusicas()
         {
             DataTable musicas = new DataTable();
 
 
-            using (var conexao = GetConexao()) 
+            using (var conexao = GetConexao())
             {
                 string query = @"SELECT id, nome_arquivo, artista, album, duracao, numero_reproducoes FROM musicas";
                 using (var cmd = new SQLiteCommand(query, conexao))
-                using (var reader = cmd.ExecuteReader()) 
+                using (var reader = cmd.ExecuteReader())
                 {
                     musicas.Load(reader);
-                   
+
                 }
 
 
@@ -58,8 +60,46 @@ namespace LyriumPlayerV3.Services
             return musicas;
 
         }
-       
+
+        public void SalvarMusica(string artista, string album, string caminhoMusicaSalva)
+        {
+            using (var conexao = GetConexao())
+            using (var transacao = conexao.BeginTransaction())
+            {
+                try
+                {
+                    string nomeArquivo = Path.GetFileName(caminhoMusicaSalva);
+                    TimeSpan duracao;
+
+                    using (var reader = new AudioFileReader(caminhoMusicaSalva)) 
+                    {
+                        duracao = reader.TotalTime;
+                    }
+
+                    string query = @"INSERT INTO musicas (nome_arquivo, caminho_arquivo, artista, album, duracao, numero_reproducoes) 
+                                     VALUES (@nomeArquivo, @caminhoArquivo, @artista, @album, @duracao, 0)";
+
+                    using (var cmd = new SQLiteCommand(query, conexao))
+                    {
+                        cmd.Transaction = transacao;
+                        cmd.Parameters.AddWithValue("@nomeArquivo", nomeArquivo);
+                        cmd.Parameters.AddWithValue("@caminhoArquivo", caminhoMusicaSalva);
+                        cmd.Parameters.AddWithValue("@artista", artista);
+                        cmd.Parameters.AddWithValue("@album", album);
+                        cmd.Parameters.AddWithValue("@duracao", Convert.ToInt32(duracao.TotalSeconds));
+                        cmd.ExecuteNonQuery();
+                    }
+                    transacao.Commit();
+                    MessageBox.Show("Música salva com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    transacao.Rollback();
+                    throw;
+                }
 
 
+            }
+        }
     }
 }
